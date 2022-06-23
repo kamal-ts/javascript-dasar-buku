@@ -106,8 +106,33 @@ cari.addEventListener('click', function (e) {
             }
         }
     }
+    
     if (e.target.id == "reset") {
         keyword.value = "";
         listBelumBaca(fullData);
     }
+})
+
+const mode = document.getElementById('mode');
+const labelCheck = document.querySelector('#labelCheck'); 
+
+
+
+mode.addEventListener('click', function () {
+    const body = document.body;
+    const head = document.querySelector('.head');
+    const bgDark = document.querySelectorAll('.card');
+
+        bgDark[0].classList.toggle('bg-dark');          
+        bgDark[0].classList.toggle('border-white');
+        bgDark[0].classList.toggle('text-light');
+
+        body.classList.toggle('bg-secondary');
+        head.classList.toggle('text-light');
+
+        if (mode.checked == true) {
+            labelCheck.innerHTML = "Light Mode";
+        } else {
+            labelCheck.innerHTML = "Dark Mode";
+        }
 })

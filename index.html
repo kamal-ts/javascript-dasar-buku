@@ -13,15 +13,21 @@
     <title>Hello, world!</title>
 </head>
 
-<body>
+<body class="bg-secondary">
 
     <div class="container-sm px-4 ">
         <!-- <div class="px-4 "> -->
-        <div class="mx-auto w-50">
+        <div class="mx-auto w-50 ">
 
-            <h1>Hello Word!</h1>
-
-            <div class="card ">
+            <div class="text-light head">
+                <h1 >Hello Word!</h1>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="mode">
+                    <label class="form-check-label" for="flexSwitchCheckDefault" id="labelCheck">Dark Mode</label>
+                </div>
+            </div>
+            
+            <div class="card bg-dark text-light border-white">
                 <div class="card-header">
                     Form Input Buku
                 </div>
@@ -53,8 +59,8 @@
 
             <div class="input-group my-4" id="cari">
                 <input type="text" class="form-control" id="keyword" placeholder="Cari Judul Buku" aria-label="Recipient's username with two button addons">
-                <button class="btn btn-outline-secondary" id="btnCari">Cari</button>
-                <button class="btn btn-outline-secondary" id="reset">Refresh</button>
+                <button class="btn btn-warning" id="btnCari">Cari</button>
+                <button class="btn btn-info" id="reset">Refresh</button>
             </div>
 
             <div class="card mt-4 bg-warning">
